@@ -16,7 +16,7 @@ export const WorksApp = () => {
 
                     <img 
                         className="work__work-travolta"
-                        src="./assets/404/travolta-confundido.gif" alt="travolta" 
+                        src="/assets/404/travolta-confundido.gif" alt="travolta" 
                         />
                 
                 </div>

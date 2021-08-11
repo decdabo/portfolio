@@ -21,7 +21,7 @@ export const HomeScreen = () => {
                 <div className="home__home-img-conteiner">
                     <img 
                         className="home__home-logo"
-                        src="./assets/logo/logo.png"
+                        src="/assets/logo/logo.png"
                         alt="logo"/>
                 </div>
 
