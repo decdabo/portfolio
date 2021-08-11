@@ -1,0 +1,90 @@
+.body{
+
+    align-items: center;
+    background-color: #221f1f;
+    color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.body__line{
+
+    background-color: lightseagreen;
+    margin-top: 15vh;
+    height: 1px;
+    width: 50vw;
+    transition: width .3s;
+
+}
+
+.body__window-conteiner{
+
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    margin-top: 15vh;
+    width: 85vw;
+
+}
+
+.body__window-box{
+    
+    align-items: center;
+    border-color: lightseagreen;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 99;
+}
+
+.body__window{
+
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.body__solid-box{
+
+    background-color: #221f1f;
+    border-radius: 5px;
+    height: 50vh;
+    left: 99.5%;
+    position: absolute;
+    transition: .3s;
+    width: 85vw;
+    z-index: 0;
+
+}
+
+.body__solid-box-line{
+
+    background-color: lightseagreen;
+    border-radius: 5px 0px 0px 5px;
+    height: 0%;
+    transition: height .2s;
+    width: 0.5%;
+
+}
+
+.solidAction{
+    left: 0%;
+}
+
+.lineAction{
+    height: 100%;
+}

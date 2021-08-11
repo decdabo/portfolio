@@ -1,0 +1,153 @@
+.skills__knowledge-conteiner{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.skills__knowledge-icon-box{
+
+    align-items: center;
+    border-right: solid 1px lightseagreen;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 30%;
+
+}
+
+.skills__knowledge-icon{
+
+    font-size: 150px;
+
+}
+
+
+.skills__knowledge-main-conteiner{
+    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 70%;
+    
+}
+
+.skills__knowledge-title-box{
+
+    align-items: center;
+    display: flex;
+    height: 35%;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.skills__star-conteiner{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    width: 100%;
+
+}
+
+.skills__star-box{
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 60%;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+
+.skills__star {
+
+    border: solid 1px lightseagreen;
+    border-radius: 6px;
+    height: 5vh;
+    width: 3vw;
+
+}
+
+.skills__back-icon-box{
+
+    align-items: center;
+    display: flex;
+    height: 30%;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.skills__back-icon{
+
+    font-size: 50px;
+    cursor: pointer;
+
+}
+
+
+.html-knowledge {
+
+    color: #f06529;
+
+}
+
+.html-on{
+
+    background-color: #f06529;
+    border: none;
+
+}
+
+.css-knowledge {
+
+    color: #264de4;
+
+}
+
+.css-on {
+
+    background-color: #264de4;
+    border: none;
+}
+
+.javascript-knowledge{
+
+    color: #F0DB4F;
+
+}
+
+.js-on {
+
+    background-color: #F0DB4F;
+    border: none;
+}
+
+.react-knowledge{
+
+    color: #61DBFB;
+
+}
+
+.react-on {
+
+    background-color: #61DBFB;
+    border: none;
+}
+
+.sass-knowledge{
+    
+    color: #CD6799;
+
+}
+
+.sass-on {
+
+    background-color: #CD6799;
+    border: none;
+}
