@@ -17,7 +17,7 @@ export const AppRouter = () => {
 
 	return (
 		<div className="body">
-			<Router>
+			<Router basename="/portfolio">
 				<NavApp />
 				<div className="body__line animate__animated animate__zoomIn animate__slower" />
 				<div className="body__window-conteiner animate__animated animate__slideInUp animate__slow">
