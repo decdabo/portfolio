@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import { PortApp } from './PortApp';
 
 ReactDOM.render(
-    <PortApp />,
-  document.getElementById( 'root' )
+  <PortApp />,
+  document.getElementById('root')
 );
