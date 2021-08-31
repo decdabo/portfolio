@@ -1,4 +1,4 @@
-.skills__knowledge-conteiner{
+.skills__knowledge-container{
     display: flex;
     height: 100%;
     width: 100%;
@@ -17,12 +17,12 @@
 
 .skills__knowledge-icon{
 
-    font-size: 150px;
+    font-size: 15vw;
 
 }
 
 
-.skills__knowledge-main-conteiner{
+.skills__knowledge-main-container{
     
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@
     
 }
 
-.skills__star-conteiner{
+.skills__star-container{
 
     align-items: center;
     display: flex;
@@ -150,4 +150,60 @@
 
     background-color: #CD6799;
     border: none;
+}
+
+
+@media(max-width: 630px){
+
+    .skills__knowledge-container{
+
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .skills__knowledge-icon-box{
+
+        align-items: center;
+        display: flex;
+        height: 30%;
+        justify-content: center;
+        width: 100%;
+    
+    }
+
+    .skills__knowledge-icon{
+
+        font-size: 10vw;
+    
+    }
+
+    .skills__knowledge-main-container{
+        
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 70%;
+        width: 100%;
+        
+    }
+
+    .skills__knowledge-icon{
+        width: 50px;
+    }
+    .skills__knowledge-title-box{
+        font-size: 10px;
+    }
+    .skills__star{
+        height: 2vh;
+    }
+
+    .skills__back-icon{
+        font-size: 30px;
+    }
+
 }

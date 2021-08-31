@@ -20,7 +20,7 @@ export const AppRouter = () => {
 			<Router basename="/portfolio">
 				<NavApp />
 				<div className="body__line animate__animated animate__zoomIn animate__slower" />
-				<div className="body__window-conteiner animate__animated animate__slideInUp animate__slow">
+				<div className="body__window-container animate__animated animate__slideInUp animate__slow">
 					<div className="body__window-box ">
 						<div className="body__window">
 							<Switch>

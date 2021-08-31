@@ -8,12 +8,14 @@ export const WorksApp = () => {
 	}
 
 	return (
-		<div className="work__work-conteiner" id="work__box">
-			<div className="work__work-conteiner-box">
+		<div className="work__work-container" id="work__box">
+			<div className="work__work-container-box">
+
 				<div className="work__work-main">
 					<img
 						className="work__work-travolta"
-						src="assets/404/travolta-confundido.gif" alt="travolta"
+						src="assets/404/travolta-confundido.gif" 
+						alt="travolta"
 					/>
 				</div>
 
@@ -23,7 +25,8 @@ export const WorksApp = () => {
 				>
 					<i className="fas fa-angle-up" />
 				</div>
+
 			</div>
 		</div>
-	)
+	);
 }

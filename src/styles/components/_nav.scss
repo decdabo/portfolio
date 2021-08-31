@@ -1,7 +1,7 @@
-.nav__navbox-conteiner {
+.nav__navbox-container {
 
     align-items: center;
-    background-color: #494141;
+    background-color: #464646;
     border-radius: 5px;
     box-shadow: 0px 2px 10px rgb(0, 0, 0);
     display: flex;
@@ -26,14 +26,14 @@
 .nav__navbar-solid-bar{
 
     background-color: lightseagreen;
-    border: 2px solid #0c0c0c;
+    border: 2px solid #221f1f;
     border-radius: 5px;
     height: 120%;
     width: 1vw;
 
 }
 
-.nav__navbar-conteiner{
+.nav__navbar-container{
 
     align-items: center;
     background-color: #313131;
@@ -45,7 +45,7 @@
 
 }
 
-.nav__navbar-jobs-conteiner{
+.nav__navbar-jobs-container{
 
     align-items: center;
     display: flex;
@@ -85,7 +85,6 @@
 }
 
 .nav__navbar-jobs-title{
-
    
     font-size: 15px;
     font-weight: 100;
@@ -95,15 +94,19 @@
 }
 
 .hide-title{
+
     font-size: 0px;
+
 }
 
 .nav__navbar-jobs-triangle{
+    
     border-bottom: 15px solid transparent;
     border-left: 15px solid lightseagreen;
     border-top: 15px solid transparent;
     height: 0; 
     width: 0; 
+    
 }
 
 .list__box{
@@ -155,7 +158,25 @@
 
 .list__text{
     
+    display: flex;
+    justify-content: center;
     color: lightseagreen;
     transition: color .5s;
+    width: 100%;
+}
+
+@media (max-width: 755px){
+
+    .nav__navbar-jobs-container{
+        display: none;
+    }
+
+    .nav__navbar-entry-bar{
+        width: 0%;
+    }
+
+    .nav__navbar-container{
+        width: 100%;
+    }
 
 }

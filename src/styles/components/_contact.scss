@@ -1,0 +1,113 @@
+.contact__contact-container{
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.contact__contact-black{
+
+    align-items: center;
+    background-color: rgba(49, 49, 49, 0.637);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.contact__title-cointeiner{
+
+    align-items: center;
+    display: flex;
+    height: 40%;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.contact__title-line{
+
+    margin-top: 3vh;
+    background-color: lightseagreen;
+    height: 1px;
+    width: 40%;
+
+}
+
+.contact__icons-container{
+
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    height: 40%;
+    width: 100%;
+
+}
+
+.contact__icon{
+
+    color: lightseagreen;
+    cursor: pointer;
+    font-size: 5vw;
+    transition: color .2s;
+
+}
+
+.contact__email-container{
+
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    font-size: 0px;
+    justify-content: center;
+    height: 20%;
+    transition: all .1s;
+    width: 80%;
+
+}
+
+.email-active{
+
+    font-size: 10px;
+
+}
+
+.box-active{
+    border: 1px solid lightseagreen;
+}
+
+.in{
+    &:hover{
+        color: #0e76a8;
+    }
+}
+
+.outlook {
+    &:hover{
+        color: #3399ff;
+    }
+}
+
+.git {
+    &:hover{
+        color: #d8d8d8;
+    }
+}
+
+
+@media (max-width: 700px){
+    
+    .contact__icon{
+        font-size: 10vw;
+    }
+
+}

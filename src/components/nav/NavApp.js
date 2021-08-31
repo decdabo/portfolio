@@ -19,16 +19,16 @@ export const NavApp = () => {
 	}
 
 	return (
-		<div className="nav__navbox-conteiner animate__animated animate__fadeIn animate__slow" >
+		<div className="nav__navbox-container animate__animated animate__fadeIn animate__slow" >
 			<div className="nav__navbar-entry-bar" >
 				<div className="nav__navbar-solid-bar" />
-				<div className="nav__navbar-jobs-conteiner">
+				<div className="nav__navbar-jobs-container">
 
 					<WorksApp />
 
 					<div
 						className="nav__navbar-morejobs"
-						onClick={handleWorkShow}
+						onClick={ handleWorkShow }
 						id="nav__button"
 					>
 						<div className="nav__navbar-jobs-triangle" />
@@ -36,27 +36,27 @@ export const NavApp = () => {
 							More jobs
 						</h1>
 					</div>
-
 				</div>
+
 			</div>
 
-			<div className="nav__navbar-conteiner" >
+			<div className="nav__navbar-container" >
 
 				<div className="list__box" >
-					<li className="list__text" onMouseDown={handleAnimation}>
+					<li className="list__text" onMouseDown={ handleAnimation }>
 						Home
 						<Link
 							name="home"
 							id="home"
 							to="/"
-							style={{ display: "none", position: "absolute" }}
+							style={{ display: "none" }}
 						/>
 					</li>
 					<div className="list__line" />
 				</div>
 
 				<div className="list__box">
-					<li className="list__text" onMouseDown={handleAnimation}>
+					<li className="list__text" onMouseDown={ handleAnimation }>
 						About Me
 						<Link
 							name="about"
@@ -69,7 +69,7 @@ export const NavApp = () => {
 				</div>
 
 				<div className="list__box">
-					<li className="list__text" onMouseDown={handleAnimation}>
+					<li className="list__text" onMouseDown={ handleAnimation }>
 						Skills
 						<Link
 							name="skills"
@@ -82,7 +82,7 @@ export const NavApp = () => {
 				</div>
 
 				<div className="list__box">
-					<li className="list__text" onMouseDown={handleAnimation}>
+					<li className="list__text" onMouseDown={ handleAnimation }>
 						Contact
 						<Link
 							name="contact"

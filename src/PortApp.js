@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { LoadingScreen } from './components/load/LoadingScreen';
 import { AppRouter } from './routers/AppRouter';
 
 export const PortApp = () => {
+
+	const [load, setLoad] = useState(true);
+
+	setTimeout(() => {
+		setLoad(false);
+	}, 2300);
+
 	return (
-		<AppRouter />
+		<>
+		{ 
+			( load ) 
+			? ( <LoadingScreen/> )
+			: ( <AppRouter /> )
+		}
+		</>
 	);
 }
