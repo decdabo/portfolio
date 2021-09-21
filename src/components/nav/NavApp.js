@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { animationSlide } from "../../helpers/animationSlide";
+import { hideWork } from "../../helpers/hideWork";
 import { workAnimation } from "../../helpers/workAnimation";
 import { WorksApp } from "./WorksApp";
 
@@ -12,6 +13,12 @@ export const NavApp = () => {
 		const link = `#${name}`;
 
 		animationSlide(link);
+	}
+
+	const handleHide = () =>{
+
+		hideWork();
+
 	}
 
 	const handleWorkShow = () => {
@@ -31,7 +38,10 @@ export const NavApp = () => {
 						onClick={ handleWorkShow }
 						id="nav__button"
 					>
-						<div className="nav__navbar-jobs-triangle" />
+						<div 
+						 className="nav__navbar-jobs-triangle" 
+						 onClick={handleHide}
+						 />
 						<h1 className="nav__navbar-jobs-title">
 							More jobs
 						</h1>
