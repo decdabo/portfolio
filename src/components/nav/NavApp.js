@@ -12,6 +12,7 @@ export const NavApp = () => {
 		const name = target.childNodes[1].name;
 		const link = `#${name}`;
 
+
 		animationSlide(link);
 	}
 
