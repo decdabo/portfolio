@@ -12,28 +12,21 @@ export const NavApp = () => {
 		const name = target.childNodes[1].name;
 		const link = `#${name}`;
 
-
 		animationSlide(link);
 	}
-
 	const handleHide = () =>{
-
 		hideWork();
-
 	}
 
 	const handleWorkShow = () => {
 		workAnimation();
 	}
-
 	return (
 		<div className="nav__navbox-container animate__animated animate__fadeIn animate__slow" >
 			<div className="nav__navbar-entry-bar" >
 				<div className="nav__navbar-solid-bar" />
 				<div className="nav__navbar-jobs-container">
-
 					<WorksApp />
-
 					<div
 						className="nav__navbar-morejobs"
 						onClick={ handleWorkShow }
@@ -48,11 +41,8 @@ export const NavApp = () => {
 						</h1>
 					</div>
 				</div>
-
 			</div>
-
 			<div className="nav__navbar-container" >
-
 				<div className="list__box" >
 					<li className="list__text" onMouseDown={ handleAnimation }>
 						Home
@@ -65,7 +55,6 @@ export const NavApp = () => {
 					</li>
 					<div className="list__line" />
 				</div>
-
 				<div className="list__box">
 					<li className="list__text" onMouseDown={ handleAnimation }>
 						About Me
@@ -78,7 +67,6 @@ export const NavApp = () => {
 					</li>
 					<div className="list__line" />
 				</div>
-
 				<div className="list__box">
 					<li className="list__text" onMouseDown={ handleAnimation }>
 						Skills
@@ -91,7 +79,6 @@ export const NavApp = () => {
 					</li>
 					<div className="list__line" />
 				</div>
-
 				<div className="list__box">
 					<li className="list__text" onMouseDown={ handleAnimation }>
 						Contact

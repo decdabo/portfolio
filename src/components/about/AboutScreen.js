@@ -5,7 +5,6 @@ export const AboutScreen = (e) => {
 
 	const [wallX, wallY] = useParallax(e, 1000, 1000);
 
-
 	return (
 		<div 
 		 className="about__about-container" 
@@ -22,7 +21,6 @@ export const AboutScreen = (e) => {
 					src="assets/img/dabo.png" 
 					/>
 				</div>
-
 				<div className="about__main-container">
 					<div className="about__title-container animate__animated animate__fadeInDown">
 						<h1>About Me</h1>
@@ -30,22 +28,22 @@ export const AboutScreen = (e) => {
 					</div>
 					<div className="about__main animate__animated animate__fadeInUp">
 						<div className="about__main-text">
-							<p
-							 className="about__text"
-							>
-								Me llamo David Caro nací en Abril de 1998.<br/> 
-								Actualmente vivo en Bahía Blanca, Buenos Aires.<br/>
-								Empecé a estudiar de manera autodidacta<br/>
-								programación en febrero del 2021 pero ya conocía<br/>
-								algo de HTML y CSS.<br />
-								<br />
-								Tengo conocimientos de edición de video e imágenes<br/>
-								música, todo aprendido desde la modalidad<br/>
-								de autodidacta. Todo lo que se ve en el sitio web<br/>
-								está hecho por mi mano (exceptuando el gif de travolta)<br />
-								<br />
-								Espero el sitio web sea de su agrado.
-							</p>	
+							<div className="about__text">
+								<p>
+									Me llamo David Caro nací en Abril de 1998. 
+									Actualmente vivo en Bahía Blanca, Buenos Aires.
+									Empecé a estudiar de manera autodidacta
+									programación en febrero del 2021 pero ya conocía
+									algo de HTML y CSS.
+									<br />
+									Tengo conocimientos de edición de video e imágenes
+									música, todo aprendido desde la modalidad
+									de autodidacta. Todo lo que se ve en el sitio web
+									está hecho por mi mano.
+									<br />
+									Espero el sitio web sea de su agrado.
+								</p>
+							</div>	
 						</div>
 					</div>
 				</div>

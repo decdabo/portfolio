@@ -1,10 +1,7 @@
 import React from 'react'
-import { useEmail } from '../../helpers/useEmail';
 import { useParallax } from '../../helpers/useParallax';
 
 export const ContactScreen = (e) => {
-
-	const [email, setTheEmail] = useEmail();
 
 	const [wallX, wallY] = useParallax(e, 1000, 1000);
 
@@ -21,7 +18,6 @@ export const ContactScreen = (e) => {
 					<h1 className = "contact__title">Contact me</h1>
 					<div className = "contact__title-line animate__animated animate__zoomIn"/>
 				</div>
-
 				<div className="contact__icons-container animate__animated animate__fadeInUp">
 					<a 
 					className="contact__icon in"
@@ -36,7 +32,6 @@ export const ContactScreen = (e) => {
 					href="mailto:david.caro.dec@hotmail.com"
 					target="_blank"
 					rel="noreferrer"
-					onClick={ ()=>setTheEmail() }
 					>
 						<i className="fas fa-envelope-square"/>
 					</a>
@@ -48,10 +43,6 @@ export const ContactScreen = (e) => {
 					>
 						<i className="fab fa-github-square"></i>
 					</a>
-				</div>
-
-				<div className={ email }>
-					<h1>david.caro.dec@hotmail.com</h1>
 				</div>
 			</div>
 		</div>

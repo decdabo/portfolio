@@ -17,6 +17,7 @@ export const useParallax = (e, sX, sY) => {
 			window.addEventListener('mousemove', handleScrollX);
 			window.addEventListener('mousemove', handleScrollY);
 		}
+		// eslint-disable-next-line
 	}, []);
 
 

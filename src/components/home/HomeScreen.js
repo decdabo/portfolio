@@ -3,7 +3,7 @@ import { useParallax } from '../../helpers/useParallax';
 
 export const HomeScreen = (e) => {
 	
-	const [hatX, hatY] = useParallax(e, 300, 300);
+	const [hatX, hatY] = useParallax(e, 100, 100);
 
 	const [wallX, wallY] = useParallax(e, -700, 700);
 
