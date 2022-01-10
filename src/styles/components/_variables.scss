@@ -1,0 +1,26 @@
+$primary-black: #1d1d1d;
+$primary-green: #20b2aa;
+$primary-grey: #313131;
+$seccondary-grey: #464646;
+
+$display-mobile: 425px;
+$display-tablet: 768px;
+$display-laptop: 1024px;
+$display-laptop-L: 1440px;
+
+
+@mixin center-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin column-box{
+    @include center-box();
+    flex-direction: column;
+}
+
+@mixin row-box{
+    @include center-box();
+    flex-direction: row;
+}

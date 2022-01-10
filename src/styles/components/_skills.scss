@@ -1,83 +1,59 @@
-.skills___skills-router{
+
+.skills{
 
     background-position: center;
     height: 100%;
     width: 100%;
-
-}
-
-.skills__skills-black{
-
-    background-color: rgba(48, 48, 48, 0.692);
-    height: 100%;
-    width: 100%;
-
-}
-
-.skills__skills-container{
-
-    align-items: center;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-
-}
-
-.skills__skills-black{
-
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-
-}
-
-.skills__title-cointeiner{
-
-    align-items: center;
-    display: flex;
-    height: 40%;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-
-}
-
-.skills__title-line{
-
-    margin-top: 3vh;
-    background-color: lightseagreen;
-    height: 1px;
-    width: 40%;
-
-}
-
-.skills__icons-container{
-
-    align-items: center;
-    display: flex;
-    justify-content: space-evenly;
-    height: 60%;
-    width: 100%;
-
-}
-
-.skills__icon{
-
-    color: lightseagreen;
-    cursor: pointer;
-    font-size: 50px;
-    transition: color .2s;
-
-}
-
-.skills__back-icon{
-    transition: color .3s;
-    &:hover{
-        color: lighten($color: lightseagreen, $amount: 10);
+    &__slider-component{
+        @include row-box();
+        background-color: rgba(0, 0, 0, 0.568);
+        justify-content: space-evenly;
+        height: 50vh;
+        padding: 2%;
+        width: 85vw;
     }
+}
+
+.slider{
+    &__img{
+        height: 96%;
+        width: 50%;
+    }
+    &__body{
+        @include column-box();
+        background-color: rgba(0, 0, 0, 0.384);
+        height: 90%;
+        width:45%;
+    }
+}
+
+.body{
+    &__head{
+        @include column-box();
+        justify-content: space-evenly;
+        height: 30%;
+        width: 100%;
+        h5{
+            font-size: 15px;
+        }
+    }
+    &__libraries{
+        @include row-box();
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        height: 70%;
+        padding: 3%;
+        width: 100%;
+        strong{
+            width:  30%;
+            font-size: x-large;
+        }
+    }
+}
+
+.img__img{
+    height: 100%;
+    width: 100%;
 }
 
 .javascript {
@@ -118,4 +94,13 @@
         color: #CD6799;
     }
 
+}
+
+.sexo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    height: 550px;
+    margin: 0 10px;
 }
