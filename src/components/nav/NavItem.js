@@ -1,22 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const NavItem = ({ data, fnc }) => {
+import windowAnimatior from "../../helpers/windowAnimator";
+
+export const NavItem = ({ data, states }) => {
   const { name, icon, title, to } = data;
+  const { setWindow, setLine } = states;
 
-  const handleClick = () =>{
-    fnc(name);
+  const handleClick = () => {
+    windowAnimatior(setWindow, setLine, name);
   }
-
+  
   return (
-    <div className="navbar__list"  onMouseDown={handleClick}>
+    <div className="navbar__list" onMouseDown={handleClick}>
       <li className="list__text">
         {title}  
         <i className={icon} />
         <Link
-          name={`${name}`}
-          id={`${name}`}
           to={`${to}`}
+          id={`${name}`}
           className="text__link"
         />
       </li>

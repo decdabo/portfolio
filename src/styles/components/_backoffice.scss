@@ -1,0 +1,128 @@
+.backoffice {
+  @include center-box();
+  height: 100vh;
+  width: 100vw;
+  &__form {
+    @include column-box();
+    border: 1px solid $primary-green;
+    border-radius: 3%;
+    justify-content: space-between;
+    height: 70%;
+    padding: 5%;
+    width: 70%;
+  }
+  &__content {
+    @include column-box();
+    height: 75vh;
+    width: 75vw;
+  }
+}
+
+.form {
+  &__text-alert {
+    color: rgb(177, 37, 37);
+  }
+  &__input {
+    background-color: $primary-grey;
+    border: 1px solid $seccondary-grey;
+    border-radius: 3px;
+    color: $primary-green;
+    height: 10%;
+    padding-left: 2%;
+    width: 60%;
+    &:focus-visible {
+      border: 1px solid $primary-green;
+      outline: none;
+    }
+  }
+  &__button {
+    background-color: $primary-grey;
+    border: 1px solid $primary-green;
+    border-radius: 3px;
+    color: $primary-green;
+    cursor: pointer;
+    height: 15%;
+    margin-top: 3%;
+    width: 30%;
+  }
+  &__link {
+    margin-top: 3%;
+    cursor: pointer;
+    color: $primary-green;
+  }
+}
+
+.content {
+  &__form {
+    @include center-box();
+    border: 1px solid $primary-green;
+    border-top: 0px;
+    height: 90%;
+    width: 100%;  
+  }
+  &__nav {
+    @include row-box();
+    // border-bottom: 1px solid $primary-green;
+    justify-content: flex-start;
+    height: 10%;
+    width: 100%;
+  }
+}
+
+.nav {
+  &__link {
+    &-backoffice {
+      @include center-box();
+      border: 1px solid $primary-green;
+      // border-radius: 0px 10px 0px 0px;      
+      font-size: x-small;
+      color: $primary-green;
+      height: 100%;
+      width: 30%;
+    }
+    &-active {
+      height: 101%;
+      border-bottom: 0px;
+    }
+  }
+  &__relleno-nav {
+    border-bottom: 1px solid $primary-green;
+    height: 100%;
+    width: 85%;
+  }
+}
+
+.form {
+  &__routes {
+    @include column-box();
+    background-color: darken($color: $seccondary-grey, $amount: 15);
+    border-radius: 5px;
+    padding: 2%;
+    height: 80%;
+    width: 90%;
+    justify-content: space-between;
+    & label {
+      font-size: large;
+    }
+    & div {
+      border: 1px solid $primary-green;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      height: 50%;
+      width: 70%;
+    }
+    & button {
+      background-color: $primary-grey;
+      border: 1px solid $primary-green;
+      cursor: pointer;
+      color: $primary-green;
+      height: 13%;
+      width: 20%;
+      &:hover {
+        background-color: lighten($color: $primary-grey, $amount: 5);
+      }
+    }
+  }
+}
