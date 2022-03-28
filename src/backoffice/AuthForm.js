@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Formik } from "formik";
 import { Link } from "react-router-dom";
+import { login } from "../reducers/actions/auth";
+import { useDispatch } from "react-redux";
 
 const AuthForm = ({ location: { pathname } }) => {
   const [isLogin, setIsLogin] = useState(true);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (pathname === "/auth") {
@@ -23,18 +26,25 @@ const AuthForm = ({ location: { pathname } }) => {
       validate={(values) => {
         const errors = {};
         if (!values.email) {
-          errors.email = "Required";
+          errors.email = "Email is required";
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {
           errors.email = "Invalid email address";
         }
+
         if (!isLogin) {
           if (!values.name && !isLogin) {
-            errors.name = "Required";
+            errors.name = "Name is required";
           } else if (values.name.length <= 2 && !isLogin) {
             errors.name = "Name too short";
           }
+        }
+
+        if(!values.password) {
+          errors.password = "Password is required"
+        } else if (values.password.length < 5) {
+          errors.password = "Password too short"
         }
 
         return errors;
@@ -46,7 +56,11 @@ const AuthForm = ({ location: { pathname } }) => {
               password: values.password,
             }
           : values;
-        alert(JSON.stringify(newValues, null, 2));
+        if (isLogin) {
+          dispatch(login(newValues, 'login'))
+        } else {
+          dispatch(login(newValues))
+        }
         setSubmitting(false);
       }}
     >
@@ -103,7 +117,9 @@ const AuthForm = ({ location: { pathname } }) => {
             onBlur={handleBlur}
             value={values.password}
           />
-          {errors.password && touched.password && errors.password}
+          {errors.password && touched.password && (
+            <h5 className="form__text-alert">{errors.password}</h5>
+          )}
           {isLogin ? (
             <>
               <button

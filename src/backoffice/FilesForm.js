@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+
+import { uploadNewBackground } from '../reducers/actions/background';
 
 export const FilesForm = ({ location: { pathname } }) => {
+  const dispatch = useDispatch();
+  const { email } = useSelector(state => state.auth);
   const [ component, setComponent ] = useState("");
   const [ preview, setPreview ] = useState()
   const [ pic, setPic ] = useState();
@@ -8,18 +13,36 @@ export const FilesForm = ({ location: { pathname } }) => {
   const [ aboutPic, setAboutPic ] = useState();
   const [ skillsPic, setSkillsPic ] = useState();
   const [ contactPic, setContactPic ] = useState();
+  const [ error, setError ] = useState(false);
   const fileInputRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const schemaImage = {
-      email: 'email@example.com',
-      imgBase64: preview
+      email,
+      image: {
+        cloudinaryId: '',
+        imageURL: preview,
+      }
     }
     if (preview) {
-      alert(JSON.stringify(schemaImage))
+      dispatch(uploadNewBackground(pathname, schemaImage));
+      setError(false);
+      switch (pic) {
+        case homePic:
+          setPreview(undefined)
+          return setHomePic(undefined);
+        case aboutPic:
+          return setAboutPic(undefined);
+        case skillsPic:
+          return setSkillsPic(undefined);
+        case contactPic: 
+          return setContactPic(undefined)
+        default:
+          break;
+      }
     } else {
-      alert('preview null')
+      setError(true);
     }
   }
 
@@ -46,18 +69,23 @@ export const FilesForm = ({ location: { pathname } }) => {
   useEffect(() => {
     switch (pathname) {
       case "/home":
+        setError(false)
         setPic(homePic)
         return setComponent("Home Background") 
       case "/about":
+        setError(false)
         setPic(aboutPic)
         return setComponent("About Background") 
       case "/skills":
+        setError(false)
         setPic(skillsPic)
         return setComponent("Skills Background") 
       case "/contact":
+        setError(false)
         setPic(contactPic)  
         return setComponent("Contact Background") 
       default:
+        setError(false)
         setPic(homePic)
         return setComponent("Home Background")
     }
@@ -90,6 +118,7 @@ export const FilesForm = ({ location: { pathname } }) => {
       <button type='button' onClick={handleUpload}>
         Upload Image
       </button>
+      {error && <h5 className="form__text-alert">Seleccione una Imagen</h5>}
       <button onClick={handleSubmit}>
         Update <br/> {component}
       </button>

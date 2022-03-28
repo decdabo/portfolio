@@ -4,8 +4,9 @@ export const aboutData = [
     icon: "fas fa-keyboard",
     text: (
       <>
-        Tengo 23 años y me apasiona programar. Empecé a programar por necesidad
-        y terminó siendo una vocación.
+        Tengo 23 años y me apasiona programar, soy empático, competitivo,
+        <br />
+        perfeccionista y me gusta efuerzo en dar resultados rápidamente cuando algo me gusta.
       </>
     ),
   },
@@ -56,6 +57,16 @@ export const aboutData = [
         -------------
         <br />
         Secundario completo, Concordia, Entre Ríos.
+        <br />
+        -------------
+        <br />
+        Esctudiante de la 
+        <br />
+        Universidad Nacional del Sur
+        <br />
+        (En pausa)
+        <br />
+        -------------
       </>
     ),
   },

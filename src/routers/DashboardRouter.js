@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import {
   HashRouter as Router,
   Switch,
@@ -14,9 +15,9 @@ import { SkillsScreen } from "../components/skills/SkillsScreen";
 import "../styles/Styles.scss";
 
 export const DashboardRouter = () => {
+  const { images } = useSelector(state => state.bg)
   const [window, setWindow] = useState("");
   const [line, setLine] = useState("");
-
   const states = {
     setWindow,
     setLine
@@ -30,10 +31,10 @@ export const DashboardRouter = () => {
         <div className="panel__content-container">
           <div className="content__screen">
               <Switch>
-                <Route path="/home" component={HomeScreen} />
-                <Route path="/about" component={AboutScreen} />
-                <Route path="/skills" component={SkillsScreen} />
-                <Route path="/contact" component={ContactScreen} />
+                <Route path="/home" render={ () => <HomeScreen pic={images.home.imageURL} /> } />
+                <Route path="/about" render={ () => <AboutScreen pic={images.about.imageURL} /> } />
+                <Route path="/skills" render={ () => <SkillsScreen pic={images.skills.imageURL} /> } />
+                <Route path="/contact" render={ () => <ContactScreen pic={images.contact.imageURL} /> } />
                 <Redirect to="/home" />
               </Switch>
           </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import {
   HashRouter as Router,
   Switch,
@@ -10,12 +11,12 @@ import AuthForm from "../backoffice/AuthForm";
 import { BackofficeDashboard } from "./BackofficeDashboard";
 
 export const BackofficeRouter = () => {
-  const auth = true;
+  const { logged: isLogged } = useSelector( state => state.auth );
   return (
     <div className="backoffice">
       <Router basename="/portfolio/backoffice">
         <Switch>
-          {auth
+          {isLogged
             ?
             (
               <>

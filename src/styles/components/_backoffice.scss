@@ -67,6 +67,28 @@
     height: 10%;
     width: 100%;
   }
+  &__logout-button {
+    background-color: $primary-green;
+    border:1px solid $primary-green;
+    border-radius: 5px;
+    cursor: pointer;
+    color: $primary-grey;
+    height: 7%;
+    min-height: 50px;
+    min-width: 150px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    transition: all .3s;
+    width: 10%;
+    & i {
+      color: $primary-grey;
+    }
+    &:hover {
+      background-color: $seccondary-grey;
+      color: $primary-green;
+    }
+  }
 }
 
 .nav {
