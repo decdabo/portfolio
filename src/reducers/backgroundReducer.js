@@ -33,7 +33,7 @@ export const backgroundReducer = (state = initialState, { type, payload }) => {
       return {
         loading: payload.loading,
         images: {
-          ...state.images
+          ...initialState.images
         }
       }
     default:

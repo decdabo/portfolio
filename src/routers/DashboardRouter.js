@@ -31,10 +31,10 @@ export const DashboardRouter = () => {
         <div className="panel__content-container">
           <div className="content__screen">
               <Switch>
-                <Route path="/home" render={ () => <HomeScreen pic={images.home.imageURL} /> } />
-                <Route path="/about" render={ () => <AboutScreen pic={images.about.imageURL} /> } />
-                <Route path="/skills" render={ () => <SkillsScreen pic={images.skills.imageURL} /> } />
-                <Route path="/contact" render={ () => <ContactScreen pic={images.contact.imageURL} /> } />
+                <Route path="/home" render={ () => <HomeScreen pic={images?.home?.imageURL ? images?.home?.imageURL : "assets/screens/home.jpg"} /> } />
+                <Route path="/about" render={ () => <AboutScreen pic={images?.about?.imageURL ? images?.about?.imageURL : "assets/screens/about.jpg"} /> } />
+                <Route path="/skills" render={ () => <SkillsScreen pic={images?.skills?.imageURL ? images?.skills?.imageURL : 'assets/screens/skills.png' } /> } />
+                <Route path="/contact" render={ () => <ContactScreen pic={images?.contact?.imageURL ? images?.contact?.imageURL : 'assets/screens/contact.png'} /> } />
                 <Redirect to="/home" />
               </Switch>
           </div>
