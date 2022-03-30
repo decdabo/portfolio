@@ -75,12 +75,16 @@ const AuthForm = ({ location: { pathname } }) => {
         /* and other goodies */
       }) => (
         <>
-          <div className="backoffice__disclaimer-register animate__animated animate__fadeIn">
-            <p>
-              Disclaimer: This backend don't require a valid email, you can create 
-              a ridiculous one, be creative!
-            </p>
-          </div>
+          {!isLogin && 
+            (
+              <div className="backoffice__disclaimer-register animate__animated animate__fadeIn">
+                <p>
+                  Disclaimer: This backend don't require a valid email, you can create 
+                  a ridiculous one, be creative!
+                </p>
+              </div>
+            )
+          }
           <form className="backoffice__form animate__animated animate__fadeInUp" onSubmit={handleSubmit}>
             {isLogin ? <h1>Backoffice Login</h1> : <h1>Backoffice Register</h1>}
             <label>Email</label>

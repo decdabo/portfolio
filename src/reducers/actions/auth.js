@@ -23,7 +23,6 @@ export const login = (formData, endpoint = 'register') => {
         dispatch(successAction)
         return dispatch(action)
       } else {
-        console.log(data)
         const errorAction = {
           type: types.ALERT_ERROR,
           payload: data.msg

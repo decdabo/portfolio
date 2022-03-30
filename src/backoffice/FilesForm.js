@@ -118,7 +118,7 @@ export const FilesForm = ({ location: { pathname } }) => {
       <button type='button' onClick={handleUpload}>
         Upload Image
       </button>
-      {error && <h5 className="form__text-alert">Seleccione una Imagen</h5>}
+      {error && <h5 className="form__text-alert">Select an image</h5>}
       <button onClick={handleSubmit}>
         Update <br/> {component}
       </button>
