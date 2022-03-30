@@ -11,7 +11,7 @@ export const SkillComponent = ({ data }) => {
         <div className="body__head">
           <h1>{title}</h1>
           <div className="head__line animate__animated animate__zoomIn animate__slower" />
-          <h5>Esta página contiene las siguientes librerías:</h5>
+          <h5>Technologies:</h5>
         </div>
         <div className="body__libraries">
           {libraries.map((tech) => {

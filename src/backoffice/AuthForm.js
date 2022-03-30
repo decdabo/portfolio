@@ -74,84 +74,92 @@ const AuthForm = ({ location: { pathname } }) => {
         isSubmitting,
         /* and other goodies */
       }) => (
-        <form className="backoffice__form" onSubmit={handleSubmit}>
-          {isLogin ? <h1>Backoffice Login</h1> : <h1>Backoffice Register</h1>}
-          <label>Email</label>
-          <input
-            className="form__input"
-            autoComplete="off"
-            type="email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-          />
-          {errors.email && touched.email && (
-            <h5 className="form__text-alert">{errors.email}</h5>
-          )}
-          {isLogin ? (
-            <></>
-          ) : (
-            <>
-              <label>Name</label>
-              <input
-                className="form__input"
-                autoComplete="off"
-                type="text"
-                name="name"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.name}
-              />
-            </>
-          )}
-          {errors.name && touched.name && (
-            <h5 className="form__text-alert">{errors.name}</h5>
-          )}
-          <label>Password</label>
-          <input
-            className="form__input"
-            type="password"
-            name="password"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.password}
-          />
-          {errors.password && touched.password && (
-            <h5 className="form__text-alert">{errors.password}</h5>
-          )}
-          {isLogin ? (
-            <>
-              <button
-                className="form__button"
-                type="submit"
-                disabled={isSubmitting}
-              >
-                Login
-              </button>
-              <label>
-                <Link className="form__link" to="/register">
-                  Not Account? Register!
-                </Link>
-              </label>
-            </>
-          ) : (
-            <>
-              <button
-                className="form__button"
-                type="submit"
-                disabled={isSubmitting}
-              >
-                Register
-              </button>
-              <label>
-                <Link className="form__link" to="/auth">
-                  Have account? Login!
-                </Link>
-              </label>
-            </>
-          )}
-        </form>
+        <>
+          <div className="backoffice__disclaimer-register animate__animated animate__fadeIn">
+            <p>
+              Disclaimer: This backend don't require a valid email, you can create 
+              a ridiculous one, be creative!
+            </p>
+          </div>
+          <form className="backoffice__form animate__animated animate__fadeInUp" onSubmit={handleSubmit}>
+            {isLogin ? <h1>Backoffice Login</h1> : <h1>Backoffice Register</h1>}
+            <label>Email</label>
+            <input
+              className="form__input"
+              autoComplete="off"
+              type="email"
+              name="email"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.email}
+            />
+            {errors.email && touched.email && (
+              <h5 className="form__text-alert">{errors.email}</h5>
+            )}
+            {isLogin ? (
+              <></>
+            ) : (
+              <>
+                <label>Name</label>
+                <input
+                  className="form__input"
+                  autoComplete="off"
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.name}
+                />
+              </>
+            )}
+            {errors.name && touched.name && (
+              <h5 className="form__text-alert">{errors.name}</h5>
+            )}
+            <label>Password</label>
+            <input
+              className="form__input"
+              type="password"
+              name="password"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.password}
+            />
+            {errors.password && touched.password && (
+              <h5 className="form__text-alert">{errors.password}</h5>
+            )}
+            {isLogin ? (
+              <>
+                <button
+                  className="form__button"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  Login
+                </button>
+                <label>
+                  <Link className="form__link" to="/register">
+                    Not Account? Register!
+                  </Link>
+                </label>
+              </>
+            ) : (
+              <>
+                <button
+                  className="form__button"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  Register
+                </button>
+                <label>
+                  <Link className="form__link" to="/auth">
+                    Have account? Login!
+                  </Link>
+                </label>
+              </>
+            )}
+          </form>
+        </>
       )}
     </Formik>
   );

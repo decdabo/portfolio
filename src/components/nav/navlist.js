@@ -1,24 +1,24 @@
 export const navlist = [
     {
-        title: "Home-",
+        title: "Home",
         icon:'fas fa-home',
         name: "home",
         to: "/home",
     },
     {
-        title: "About-",
+        title: "About",
         icon: "far fa-address-card",
         name: "about",
         to: "/about",
     },
     {
-        title: "Skills-",
+        title: "Skills",
         icon: "fas fa-chart-area",
         name: "skills",
         to: "/skills",
     },
     {
-        title: "Contact-",
+        title: "Contact",
         icon: "fas fa-phone-square-alt",
         name: "contact",
         to: "/contact",

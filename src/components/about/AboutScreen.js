@@ -34,6 +34,12 @@ export const AboutScreen = ({ e, pic }) => {
         transform: `translateX(${wallX}px) translateY(${wallY}px)`,
       }}
     >
+      <div className="about__disclaimer">
+        <p>
+          You can stop and control the slider putting the mouse inside of this section box
+          <i className="fa-solid fa-arrow-pointer"></i>
+        </p>
+      </div>
       <main className="about">
         <Slider {...settings}>
           {aboutData.map((data, i) => {

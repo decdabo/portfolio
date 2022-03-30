@@ -15,25 +15,28 @@ export const login = (formData, endpoint = 'register') => {
             access: data.access
           }
         }
+        const successAction = {
+          type: types.ALERT_SUCCESS,
+          payload: data.msg
+        }
         localStorage.setItem('user', JSON.stringify({ email: data.email, name: data.name }))
-
+        dispatch(successAction)
         return dispatch(action)
       } else {
-        // const action = {
-        //   type: types.SET_ERROR,
-        //   payload: data.msg
-        // }
-
-        // return dispatch(action)
         console.log(data)
+        const errorAction = {
+          type: types.ALERT_ERROR,
+          payload: data.msg
+        }
+
+        return dispatch(errorAction)
       }
     } catch (error) {
-      console.log(error)
       dispatch({
         type: types.LOG_OUT
       })
       dispatch({
-        type: types.SET_ERROR,
+        type: types.ALERT_ERROR,
         payload: 'Issues on the services'
       })
     }
@@ -42,12 +45,18 @@ export const login = (formData, endpoint = 'register') => {
 
 export const logout = () => {
   return (dispatch) => {
+    localStorage.removeItem("user");
+
     const action = {
       type: types.LOG_OUT,
       payload: false
     };
-    localStorage.removeItem("user");
-  
+    const successLogoutAction = {
+      type: types.ALERT_SUCCESS,
+      payload: 'Succesfully logout!'
+    }
+    
+    dispatch(successLogoutAction)
     return dispatch(action);
   }
 }

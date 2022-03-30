@@ -1,52 +1,52 @@
 export const aboutData = [
   {
-    title: "PERFIL PERSONAL",
+    title: "PROFILE",
     icon: "fas fa-keyboard",
     text: (
       <>
-        Tengo 23 años y me apasiona programar, soy empático, competitivo,
+        I'am 23 years old, competitive,
         <br />
-        perfeccionista y me gusta efuerzo en dar resultados rápidamente cuando algo me gusta.
+        perfeccionist and I like to grow up fast when something likes me.
       </>
     ),
   },
   {
-    title: "APTITUDES",
+    title: "SKILLS",
     icon: "fab fa-medapps",
     text: (
       <>
-        Poseo aptitudes que me hacen ser un buen candidato tanto como para
-        trabajar en equipo tales como: ser asertivo, empático y buena capacidad
-        de relacionarme interpersonalmente. 
+        I have top skills who makes me a good choice to be a good candidate
+        for work with me, for example: Assertive, empathetic, good comunication
+        and interperpersonal skills
         <br />
-        También trabaje en mis habilidades
-        individuales como por ejemplo ser buen autodidacta, tener siempre la
-        disposición a aprender y estar siempre orientado a los resultados.
+        I worked my individual skills too,
+        like for example be a good self-taught, have the
+        mindset to learn and be everytime result oriented
       </>
     ),
   },
   {
-    title: "EXPERIENCIA LABORAL",
+    title: "WORK EXPERIENCE",
     icon: "fab fa-black-tie",
     text: (
       <>
         Front-end Developer Junior
         <br />
-        Aceleracion Alkemy || Noviembre 2021 - Enero 2022
+        Aceleracion Alkemy || November 2021 - January 2022
         <br />
-        Fui parte de un equipo de trabajo en el cual se desarrolló una página
-        para una ONG llamada "Somos Más". Incluye autenticación de formularios,
-        registro y loggeo de usuarios, autenticación por tokens, persistencia de
-        sesión, diseño full responsive mobile-first, integración a diferentes
-        SDK tales como la de Google Maps.
+        I was part for a work team who develop a webpage to an ONG called 
+        "Somos Más". This webpage includes, form authentications, 
+        signin and login by emails, token authentication, session persistance,
+        full responsive design mobile-first, differents SDK integrations like 
+        Google Maps. 
         <div className="line__about" />
-        Tecnologías usadas: ReactJS, Sass, Redux, React Router, CDKEditor,
+        Technologies: ReactJS, Sass, Redux, React Router, CDKEditor,
         Formik, React Slick, Sweetalert2, Yup.
       </>
     ),
   },
   {
-    title: "FORMACIÓN ACADEMICA",
+    title: "ACADEMY HISTORY",
     icon: "fas fa-book",
     text: (
       <>
@@ -56,15 +56,15 @@ export const aboutData = [
         <br />
         -------------
         <br />
-        Secundario completo, Concordia, Entre Ríos.
+        High School graduate, Concordia, Entre Ríos.
         <br />
         -------------
         <br />
-        Esctudiante de la 
-        <br />
         Universidad Nacional del Sur
         <br />
-        (En pausa)
+        Student
+        <br />
+        (In pause)
         <br />
         -------------
       </>

@@ -25,7 +25,7 @@ export const BackofficeDashboard = ({ location: { pathname } }) => {
           <i className="fa-solid fa-right-from-bracket"></i>
           Log Out
         </button>
-        <div className='content__form'>
+        <div className='content__form animate__animated animate__fadeIn'>
             <Switch>
               <Route exact path="/home" component={FilesForm} />
               <Route exact path="/about" component={FilesForm} />

@@ -21,7 +21,14 @@ export const setLoadOff = ( email ) => {
           loading: false
         }
       }
-      console.log(error)
+      const errorAction = {
+        type: types.ALERT_ERROR,
+        payload: {
+          msg: 'Error connecting with the server'
+        }
+      }
+
+      dispatch(errorAction)
       return dispatch(action)
     }
   }
@@ -39,14 +46,24 @@ export const uploadNewBackground = (endpoint, formData) => {
             loading: false,
             images: data.data?.images
           }
+        } 
+        const successAlertAction = {
+          type: types.ALERT_SUCCESS,
+          payload: 'The image has been upload!'
         }
-
-        dispatch(action);
+        dispatch(successAlertAction)
+        return dispatch(action);
       } else {
-        console.log(data);
+        return dispatch({
+          type: types.ALERT_ERROR,
+          payload: data.msg
+        });
       }
     } catch (error) {
-      console.log(error)
+      return dispatch({
+        type: types.ALERT_ERROR,
+        payload: 'Error connecting with the server'
+      });
     }
   }
 }

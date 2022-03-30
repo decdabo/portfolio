@@ -19,6 +19,18 @@
     height: 50vh;
     width: 70%;
   }
+  &__disclaimer {
+    @include center-box();
+    border: 1px solid $primary-green;
+    background-color: rgba(0, 0, 0, 0.46);
+    height: 100px;
+    padding: 2%;
+    position: absolute;
+    width: 240px;
+    & i {
+      margin-left: 5%      
+    }
+  }
 }
 
 .item {

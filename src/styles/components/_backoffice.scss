@@ -1,7 +1,21 @@
 .backoffice {
   @include center-box();
   height: 100vh;
+  flex-direction: column;
   width: 100vw;
+  &__disclaimer-register {
+    @include center-box();
+    border: 1px solid $primary-green;
+    border-radius: 5px;
+    height: 70px;
+    margin-bottom: 1%;
+    padding: 1%;
+    min-width: 300px;
+    width: 50%;
+    & p {
+      font-size: small;
+    }
+  }
   &__form {
     @include column-box();
     border: 1px solid $primary-green;
@@ -56,6 +70,7 @@
   &__form {
     @include center-box();
     border: 1px solid $primary-green;
+    border-radius: 0px 0px 10px 10px;
     border-top: 0px;
     height: 90%;
     width: 100%;  

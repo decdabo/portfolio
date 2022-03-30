@@ -105,7 +105,7 @@ export const FilesForm = ({ location: { pathname } }) => {
   }, [pic])
 
   return (
-    <form className='form__routes' onSubmit={handleSubmit}>
+    <form className='form__routes animate__animated animate__fadeIn' onSubmit={handleSubmit}>
       <label>{component}</label>
       <div style={{ backgroundImage: `url(${preview ? `${preview}` : 'none'})`}} />
       <input 
