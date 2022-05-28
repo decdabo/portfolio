@@ -2,13 +2,7 @@ export const aboutData = [
   {
     title: "PROFILE",
     icon: "fas fa-keyboard",
-    text: (
-      <>
-        I'am 23 years old, competitive,
-        <br />
-        perfeccionist and I like to grow up fast when something likes me.
-      </>
-    ),
+    text: (<>I'm 23 years old, competitive, perfectionist and I learn fast when I like something.</>),
   },
   {
     title: "SKILLS",

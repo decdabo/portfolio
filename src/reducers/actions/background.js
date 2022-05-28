@@ -9,10 +9,10 @@ export const setLoadOff = ( email ) => {
         type: types.GOOD_LOAD_OFF,
         payload: {
           loading: false,
-          images: data
+          images: data.images ? data.images : data
         }
       }
-
+      
       return dispatch(action);
     } catch (error) {
       const action = {

@@ -5,9 +5,10 @@ import { uploadNewBackground } from '../reducers/actions/background';
 
 export const FilesForm = ({ location: { pathname } }) => {
   const dispatch = useDispatch();
-  const { email } = useSelector(state => state.auth);
+  const { auth:{ email }, bg:{ images } } = useSelector(state => state);
   const [ component, setComponent ] = useState("");
-  const [ preview, setPreview ] = useState()
+  const [ preview, setPreview ] = useState();
+  const [ placeHolder, setPlaceHolder ] = useState('');
   const [ pic, setPic ] = useState();
   const [ homePic, setHomePic ] = useState();
   const [ aboutPic, setAboutPic ] = useState();
@@ -71,22 +72,27 @@ export const FilesForm = ({ location: { pathname } }) => {
       case "/home":
         setError(false)
         setPic(homePic)
+        setPlaceHolder(images['home'].imageURL)
         return setComponent("Home Background") 
       case "/about":
         setError(false)
         setPic(aboutPic)
+        setPlaceHolder(images['about'].imageURL)
         return setComponent("About Background") 
       case "/skills":
         setError(false)
         setPic(skillsPic)
+        setPlaceHolder(images['skills'].imageURL)
         return setComponent("Skills Background") 
       case "/contact":
         setError(false)
         setPic(contactPic)  
+        setPlaceHolder(images['contact'].imageURL)
         return setComponent("Contact Background") 
       default:
         setError(false)
         setPic(homePic)
+        setPlaceHolder(images['home'].imageURL)
         return setComponent("Home Background")
     }
     // eslint-disable-next-line
@@ -100,14 +106,14 @@ export const FilesForm = ({ location: { pathname } }) => {
       }
       reader.readAsDataURL(pic)
     } else {
-      setPreview(null)
+      setPreview(placeHolder);
     }
-  }, [pic])
+  }, [pic, placeHolder])
 
   return (
     <form className='form__routes animate__animated animate__fadeIn' onSubmit={handleSubmit}>
       <label>{component}</label>
-      <div style={{ backgroundImage: `url(${preview ? `${preview}` : 'none'})`}} />
+      <div style={{ backgroundImage: `url(${preview ? `${preview}` : 'none' })`}} />
       <input 
         accept='image/*' 
         type="file" 
