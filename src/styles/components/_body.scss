@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .body {
   @include column-box();
   background-color: $primary-black;

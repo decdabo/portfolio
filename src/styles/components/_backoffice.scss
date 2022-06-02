@@ -64,6 +64,38 @@
     cursor: pointer;
     color: $primary-green;
   }
+  &__routes {
+    @include column-box();
+    background-color: darken($color: $seccondary-grey, $amount: 15);
+    border-radius: 5px;
+    padding: 2%;
+    height: 80%;
+    width: 90%;
+    justify-content: space-between;
+    & label {
+      font-size: large;
+    }
+    & div {
+      border: 1px solid $primary-green;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      height: 50%;
+      width: 70%;
+    }
+    & button {
+      background-color: $primary-grey;
+      border: 1px solid $primary-green;
+      cursor: pointer;
+      color: $primary-green;
+      height: 13%;
+      width: 20%;
+      &:hover {
+        background-color: lighten($color: $primary-grey, $amount: 5);
+      }
+    }
+  }
 }
 
 .content {
@@ -126,40 +158,5 @@
     border-bottom: 1px solid $primary-green;
     height: 100%;
     width: 85%;
-  }
-}
-
-.form {
-  &__routes {
-    @include column-box();
-    background-color: darken($color: $seccondary-grey, $amount: 15);
-    border-radius: 5px;
-    padding: 2%;
-    height: 80%;
-    width: 90%;
-    justify-content: space-between;
-    & label {
-      font-size: large;
-    }
-    & div {
-      border: 1px solid $primary-green;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      overflow: hidden;
-      height: 50%;
-      width: 70%;
-    }
-    & button {
-      background-color: $primary-grey;
-      border: 1px solid $primary-green;
-      cursor: pointer;
-      color: $primary-green;
-      height: 13%;
-      width: 20%;
-      &:hover {
-        background-color: lighten($color: $primary-grey, $amount: 5);
-      }
-    }
   }
 }
