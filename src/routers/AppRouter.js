@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import {
   HashRouter as Router,
   Switch,
@@ -9,15 +9,16 @@ import { useSelector } from "react-redux";
 import { DashboardRouter } from "./DashboardRouter";
 import { BackofficeRouter } from "./BackofficeRouter";
 import { NavAppRouter } from "../components/nav/NavAppRouter";
-import windowAnimatior from "../helpers/windowAnimator";
+import { initialState, navReducer } from "../reducers/actions/nav";
+import { globalWindowAnimatior } from "../helpers/windowAnimator";
 import "../styles/Styles.scss";
 
 export const AppRouter = () => {
   const alert = useSelector(state => state.alert )
   const [ classState, setClassState ] = useState('')
-  const [ window, setWindow ] = useState("");
-  const [ line, setLine ] = useState("");
-  
+  const [ windowState, setWindowState ] = useReducer(navReducer, initialState)  
+  const { display, line, window } = windowState;
+
   const handleCloseAlert = () => {
     setClassState('');
   }
@@ -44,14 +45,14 @@ export const AppRouter = () => {
         <p>{alert.msg}</p>
       </div>
       <Router basename="/portfolio">
-        <NavAppRouter fncWindow={setWindow} fncLine={setLine} animator={windowAnimatior} />
+        <NavAppRouter setWindowState={setWindowState} animator={globalWindowAnimatior} />
         <Switch>
           <Route path="/backoffice" component={BackofficeRouter} />
           <Route path="/" component={DashboardRouter} />
         </Switch>
       </Router>
-      <div className={`global__window ${window}`}>
-        <div className={`global__line ${line}`}/>
+      <div className={`global__window ${ window && "closeWindow" }`} style={{display: `${ display ? 'block' : 'none' }`}}>
+        <div className={`global__line ${line && "showLine"}`}/>
       </div>
     </div>
   );

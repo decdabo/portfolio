@@ -20,7 +20,7 @@ export const ContactScreen = ({ e, pic }) => {
       <div className="contact">
         <div className="contact__item">
           <div className="item__head-contact">
-            <h1 className="head__title-contact">Contactame!</h1>
+            <h1 className="head__title-contact">Hit me out!</h1>
             <div className="head__line animate__animated animate__zoomIn" />
           </div>
           <div className="item__body-contact">
@@ -44,7 +44,7 @@ export const ContactScreen = ({ e, pic }) => {
         </div>
         <div className="contact__item">
           <div className="item__head-contact">
-            <h1 className="head__title-contact">Repositorios</h1>
+            <h1 className="head__title-contact">Repositories</h1>
             <div className="head__line animate__animated animate__zoomIn" />
           </div>
           <div className="item__body-contact">

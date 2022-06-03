@@ -2,28 +2,15 @@ import React, { useState, useEffect, useRef, useReducer } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { uploadNewBackground } from "../reducers/actions/background";
-import { imagesReducer } from './imagesReducer'
+import { imagesReducer, initialState } from './imagesReducer'
 import { picTypes } from "./types";
 
-const initialState = {
-  component: "",
-  placeHolder: "",
-  pic: undefined,
-  home: undefined,
-  about: undefined,
-  skills: undefined,
-  contact: undefined,
-};
-
 export const FilesForm = ({ location: { pathname } }) => {
-  const dispatch = useDispatch();
-  const [
-    { component, placeHolder, pic, preview },
-    dispatchDataImages,
-  ] = useReducer(imagesReducer, initialState);
   const { auth: { email }, bg: { images } } = useSelector((state) => state);
+  const [{ component, placeHolder, pic, preview }, dispatchDataImages ] = useReducer(imagesReducer, initialState);
   const [error, setError] = useState(false);
   const fileInputRef = useRef();
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,20 +23,9 @@ export const FilesForm = ({ location: { pathname } }) => {
     };
     if (preview) {
       dispatch(uploadNewBackground(pathname, schemaImage));
-      setError(false);
-      // switch (pic) {
-      //   case homePic:
-      //     setPreview(undefined);
-      //     return setHomePic(undefined);
-      //   case aboutPic:
-      //     return setAboutPic(undefined);
-      //   case skillsPic:
-      //     return setSkillsPic(undefined);
-      //   case contactPic:
-      //     return setContactPic(undefined);
-      //   default:
-      //     break;
-      // }
+      dispatchDataImages({ type: pic });
+
+      return setError(false);
     } else {
       setError(true);
     }
@@ -72,12 +48,12 @@ export const FilesForm = ({ location: { pathname } }) => {
     dispatchDataImages({
       type: pathname,
       payload: {
-        ...images,
+        ...images
       },
     });
 
     // eslint-disable-next-line
-  }, [pathname]);
+  }, [pathname, images, placeHolder]);
 
   useEffect(() => {
     if (pic) {
