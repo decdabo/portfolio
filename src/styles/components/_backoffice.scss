@@ -10,7 +10,7 @@
     height: 70px;
     margin-bottom: 1%;
     padding: 1%;
-    min-width: 300px;
+    min-width: 200px;
     width: 50%;
     & p {
       font-size: small;
@@ -24,11 +24,26 @@
     height: 70%;
     padding: 5%;
     width: 70%;
+    @media (max-width: $display-mobile) {
+      height: 80%;
+      width: 100%;
+      & label {
+        height: 10%;
+        a {
+          @include center-box();
+          height: 100%;
+          width: 100%; 
+        }
+      }
+    }
   }
   &__content {
     @include column-box();
     height: 75vh;
     width: 75vw;
+    @media (max-width: $display-mobile) {
+      width: 100%;
+    }
   }
 }
 
@@ -48,6 +63,9 @@
       border: 1px solid $primary-green;
       outline: none;
     }
+    @media (max-width: $display-mobile) {
+      width: 80%;
+    }
   }
   &__button {
     background-color: $primary-grey;
@@ -58,6 +76,10 @@
     height: 15%;
     margin-top: 3%;
     width: 30%;
+    @media (max-width: $display-mobile) {
+      height: 10%;
+      margin-top: 0;
+    }
   }
   &__link {
     margin-top: 3%;
@@ -72,6 +94,10 @@
     height: 80%;
     width: 90%;
     justify-content: space-between;
+    @media (max-width: $display-mobile) {
+      height: 97%;
+      width: 100%;
+    }
     & label {
       font-size: large;
     }
@@ -83,16 +109,22 @@
       overflow: hidden;
       height: 50%;
       width: 70%;
+      @media (max-width: $display-mobile) {
+        width: 90%;
+      }
     }
     & button {
       background-color: $primary-grey;
       border: 1px solid $primary-green;
       cursor: pointer;
       color: $primary-green;
-      height: 13%;
-      width: 20%;
+      height: 15%;
+      width: 25%;
       &:hover {
         background-color: lighten($color: $primary-grey, $amount: 5);
+      }
+      @media (max-width: $display-mobile) {
+        width: 40%;
       }
     }
   }
@@ -135,6 +167,9 @@
       background-color: $seccondary-grey;
       color: $primary-green;
     }
+    @media (max-width: $display-mobile) {
+      top: 1%;
+    }
   }
 }
 
@@ -148,6 +183,9 @@
       color: $primary-green;
       height: 100%;
       width: 30%;
+      @media (max-width: $display-mobile) {
+        width: 40%;
+      }
     }
     &-active {
       height: 101%;
@@ -158,5 +196,8 @@
     border-bottom: 1px solid $primary-green;
     height: 100%;
     width: 85%;
+    @media (max-width: $display-mobile) {
+      width: 20%;
+    }
   }
 }
