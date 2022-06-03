@@ -11,7 +11,7 @@ export const AboutItem = ({ data }) => {
         <div className="head__line animate__animated animate__zoomIn animate__slower" />
       </div>
       <div className="item__body">
-        <p className="body__text">
+        <p>
           {text}
         </p>
       </div>

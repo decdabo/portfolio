@@ -12,7 +12,7 @@ export const AboutScreen = ({ e, pic }) => {
   const settings = {
     autoplay: true,
     arrows: false,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 3500,
     speed: 1500,
     slidesToScroll: 1,
     verticalSwiping: true,

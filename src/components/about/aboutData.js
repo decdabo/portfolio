@@ -34,8 +34,10 @@ export const aboutData = [
         full responsive design mobile-first, differents SDK integrations like 
         Google Maps. 
         <div className="line__about" />
-        Technologies: ReactJS, Sass, Redux, React Router, CDKEditor,
-        Formik, React Slick, Sweetalert2, Yup.
+        <p>
+          Technologies: ReactJS, Sass, Redux, React Router, CDKEditor,
+          Formik, React Slick, Sweetalert2, Yup.
+        </p>
       </>
     ),
   },
