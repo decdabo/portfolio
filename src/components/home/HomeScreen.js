@@ -18,7 +18,7 @@ export const HomeScreen = ({ e, pic }) => {
         transform: `translateX(${wallX}px) translateY(${wallY}px)`,
       }}
     >
-      <main className="home__main">
+      <main>
         <div className="main__text">
           <div className="text__name animate__animated animate__slideInLeft animate__delay-1s">
             <h1>David</h1>

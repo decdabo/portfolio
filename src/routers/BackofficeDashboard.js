@@ -12,8 +12,9 @@ import { FilesForm } from '../backoffice/FilesForm';
 import { logout } from '../reducers/actions/auth';
 
 export const BackofficeDashboard = ({ location: { pathname } }) => {
+  const paths = ["/home", "/about", "/skills", "/contact"]
   const dispatch = useDispatch();
-  
+
   const handleLogout = () => {
     return dispatch(logout());
   }
@@ -27,10 +28,7 @@ export const BackofficeDashboard = ({ location: { pathname } }) => {
         </button>
         <div className='content__form animate__animated animate__fadeIn'>
             <Switch>
-              <Route exact path="/home" component={FilesForm} />
-              <Route exact path="/about" component={FilesForm} />
-              <Route exact path="/skills" component={FilesForm} />
-              <Route exact path="/contact" component={FilesForm} />
+              { paths.map((path, i) => <Route key={i} exact path={path} component={FilesForm} />) }
               <Redirect to="/home" />
             </Switch>
         </div>

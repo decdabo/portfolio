@@ -4,25 +4,39 @@
     background-position: center;
     height: 100%;
     width: 100%;
+    main {
+      @include row-box();
+      background-color: rgba(37, 37, 37, 0.699);
+      height: 100%;
+      font-family: "Oswald", sans-serif;
+      justify-content: space-evenly;
+      width: 100%;
+      .main__text {
+        height: 100%;
+        width: 70%;
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
+      .main__logo-container {
+        @include center-box();
+        height: 100%;
+        justify-content: flex-start;
+        width: 30%;
+        .logo__img {
+          cursor: pointer;
+          transition: width 0.3s;
+          width: 200px;
+        }
+        @media (max-width: 800px) {
+          justify-content: center;
+          width: 100%;
+        }
+      }
+    }
     @media (max-width: 1250px) {
       background-size: 1250px;
     }
-  }
-  &__main {
-    @include row-box();
-    background-color: rgba(37, 37, 37, 0.699);
-    height: 100%;
-    font-family: "Oswald", sans-serif;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-}
-
-.main__text {
-  height: 100%;
-  width: 70%;
-  @media (max-width: 800px) {
-    display: none;
   }
 }
 
@@ -41,21 +55,4 @@
     justify-content: flex-end;
     width: 85%;
   }
-}
-
-.main__logo-container {
-  @include center-box();
-  height: 100%;
-  justify-content: flex-start;
-  width: 30%;
-  @media (max-width: 800px) {
-    justify-content: center;
-    width: 100%;
-  }
-}
-
-.logo__img {
-  cursor: pointer;
-  transition: width 0.3s;
-  width: 200px;
 }

@@ -3,80 +3,78 @@
   background-position: center;
   height: 100%;
   width: 100%;
+
+  .about {
+    @include column-box();
+    background-color: rgba(0, 0, 0, 0.692);
+    height: auto;
+    width: 100%;
+
+    &__item {
+      @include column-box();
+      margin: auto;
+      height: 50vh;
+      width: 70%;
+
+      .item {
+        &__head {
+          @include column-box();
+          height: 30%;
+          width: 100%;
+
+          h1 {
+            font-size: xx-large;
+            text-align: center;
+          }
+
+          div {
+            background-color: $primary-green;
+            margin-top: 3%;
+            height: 1px;
+            width: 50%;
+            transition: width 0.3s;
+          }
+        }
+
+        &__body {
+          height: 70%;
+          width: 100%;
+
+          p {
+            font-size: large;
+            text-align: center;
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    &__disclaimer {
+      @include center-box();
+      border: 1px solid $primary-green;
+      background-color: rgba(0, 0, 0, 0.46);
+      height: 100px;
+      padding: 2%;
+      position: absolute;
+      width: 240px;
+
+      & i {
+        margin-left: 5%
+      }
+    }
+  }
+
   @media (max-width: $display-laptop) {
     background-size: 1250px;
   }
 }
 
-.about {
-  @include column-box();
-  background-color: rgba(0, 0, 0, 0.692);
-  height: auto;
-  width: 100%;
-  &__item {
-    @include column-box();
-    margin: auto;
-    height: 50vh;
-    width: 70%;
-  }
-  &__disclaimer {
-    @include center-box();
-    border: 1px solid $primary-green;
-    background-color: rgba(0, 0, 0, 0.46);
-    height: 100px;
-    padding: 2%;
-    position: absolute;
-    width: 240px;
-    & i {
-      margin-left: 5%      
-    }
-  }
-}
-
-.item {
-  &__head {
-    @include column-box();
-    height: 30%;
-    width: 100%;
-  }
-  &__body {
-    height: 70%;
-    width: 100%;
-  }
-}
-
-.head__text {
-  font-size: xx-large;
-  text-align: center;
-}
-.head__line {
-  background-color: $primary-green;
-  margin-top: 3%;
+.line__about {
+  margin-top: 2%;
+  margin-bottom: 2%;
   height: 1px;
-  width: 50%;
-  transition: width 0.3s;
-}
-.body__text {
-  font-size: large;
-  text-align: center;
-  margin: auto;
-}
-// .text__alert-about {
-//   background-color: rgba(0, 0, 0, 0.521);
-//   border-radius: 5px;
-//   color: rgb(177, 54, 54);
-//   font-size: x-large;
-//   margin: auto;
-//   margin-top: 10%;
-//   width: 50%;
-// }
-
-.line__about{
-    margin-top: 2%;
-    margin-bottom: 2%;
-    height: 1px;
-    background-color: $primary-green;
-    width: 100%;
+  background-color: $primary-green;
+  width: 100%;
 }
 
 ::-webkit-scrollbar {

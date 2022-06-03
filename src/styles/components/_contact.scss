@@ -1,66 +1,70 @@
-.section__contact{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    height: 100%;
-    overflow: scroll;
+.section__contact {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  height: 100%;
+  overflow: scroll;
+  width: 100%;
+}
+
+.contact {
+  @include row-box();
+  background-color: rgba(49, 49, 49, 0.637);
+  height: auto;
+  width: 100%;
+
+  &__item {
+    @include column-box();
+    height: 50vh;
+    width: 50%;
+  }
+
+  @media (max-width: $display-tablet) {
+    flex-direction: column;
+  }
+}
+
+.item {
+  &__head-contact {
+    @include column-box();
+    height: 30%;
     width: 100%;
-}
+  }
 
-.contact{
-    @include row-box();
-    background-color: rgba(49, 49, 49, 0.637);
-    height: auto;
+  &__body-contact {
+    @include column-box();
+    justify-content: space-evenly;
+    height: 70%;
     width: 100%;
-    &__item{
-        @include column-box();
-        height: 50vh;
-        width: 50%;
-    }
-    @media (max-width: $display-tablet){
-        flex-direction: column;
-    }
+  }
 }
 
-.item{
-    &__head-contact{
-        @include column-box();
-        height: 30%;
-        width: 100%;
-    }
-    &__body-contact{
-        @include column-box();
-        justify-content: space-evenly;
-        height: 70%;
-        width: 100%;
-    }
-}
+.body__icon-contact {
+  font-size: 50px;
+  color: $primary-green;
+  transition: all .5s;
 
-.body__icon-contact{
-    font-size: 50px;
-    color: $primary-green;
-    transition: all .5s;
-    strong{
-        font-size: 30px;
-    }
+  strong {
+    font-size: 30px;
+  }
 }
 
 
 
-.in{
-    &:hover{
-        color: #0e76a8;
-    }
+.in {
+  &:hover {
+    color: #0e76a8;
+  }
 }
 
 .outlook {
-    &:hover{
-        color: #3399ff;
-    }
+  &:hover {
+    color: #3399ff;
+  }
 }
 
 .git {
-    &:hover{
-        color: #d8d8d8;
-    }
+  &:hover {
+    color: #d8d8d8;
+  }
 }

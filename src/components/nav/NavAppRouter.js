@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export const NavAppRouter = ({ fncWindow, fncLine, animator }) => {
+export const NavAppRouter = ({ setWindowState, animator }) => {
   const { pathname } = useLocation();
   const [ toggleButtons, setToggleButtons ] = useState(true);
   const regex = new RegExp('/backoffice/')
   const handleAnimation = () => {
     if (regex.exec(pathname)) {
-      animator(fncWindow, fncLine, 'backtohome');
+      animator(setWindowState, 'backtohome');
     } else {
-      animator(fncWindow, fncLine, 'gobackoffice');
+      animator(setWindowState, 'gobackoffice');
     }
   };
 
