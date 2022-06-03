@@ -18,6 +18,9 @@
   &__img {
     height: 96%;
     width: 50%;
+    @media (max-width: $display-mobile) {
+      width: 90%;
+    }
   }
 
   &__body {
