@@ -43,6 +43,9 @@ body {
     & p {
       font-size: small;
     }
+    @media (max-width: $display-mobile) {
+      display: none;
+    }
   }
   &__line {
     background-color: $primary-green;
@@ -56,6 +59,9 @@ body {
     height: 50vh;
     margin-top: 15vh;
     width: 85vw;
+    @media (max-width: $display-mobile) {
+      width: 97vw;
+    }
   }
   &__backoffice-link {
     @include center-box();
@@ -78,7 +84,11 @@ body {
         color: $primary-green;
       }
     }
-
+    @media (max-width: $display-mobile) {
+      padding-bottom: 5%;
+      top: -17%;
+      min-width: 100px;
+    }
   }
   &__backhome-link {
     @include center-box();
@@ -99,6 +109,11 @@ body {
       .backhome__link {
         color: $primary-green;
       }
+    }
+    @media (max-width: $display-tablet) {
+      padding-right: 5%;
+      top: 1%;
+      left: -3%;
     }
   }
 }
@@ -131,6 +146,9 @@ body {
   transition: 0.3s;
   width: 85vw;
   z-index: 0;
+  @media (max-width: $display-mobile) {
+    width: 97vw;
+  }
 }
 
 .window__line {

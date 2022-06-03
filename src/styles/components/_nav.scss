@@ -70,6 +70,11 @@
   & i {
     margin-left: 3%;
   }
+  @media (max-width: $display-mobile) {
+    strong {
+      display: none;
+    }
+  }
 }
 
 .text__link {

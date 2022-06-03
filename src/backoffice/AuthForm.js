@@ -79,7 +79,7 @@ const AuthForm = ({ location: { pathname } }) => {
             (
               <div className="backoffice__disclaimer-register animate__animated animate__fadeIn">
                 <p>
-                  Disclaimer: This backend don't require a valid email, you can create 
+                  Disclaimer: This backend don't require real email, you can create 
                   a ridiculous one, be creative!
                 </p>
               </div>
@@ -131,37 +131,18 @@ const AuthForm = ({ location: { pathname } }) => {
             {errors.password && touched.password && (
               <h5 className="form__text-alert">{errors.password}</h5>
             )}
-            {isLogin ? (
-              <>
-                <button
-                  className="form__button"
-                  type="submit"
-                  disabled={isSubmitting}
-                >
-                  Login
-                </button>
-                <label>
-                  <Link className="form__link" to="/register">
-                    Not Account? Register!
-                  </Link>
-                </label>
-              </>
-            ) : (
-              <>
-                <button
-                  className="form__button"
-                  type="submit"
-                  disabled={isSubmitting}
-                >
-                  Register
-                </button>
-                <label>
-                  <Link className="form__link" to="/auth">
-                    Have account? Login!
-                  </Link>
-                </label>
-              </>
-            )}
+            <button
+              className="form__button"
+              type="submit"
+              disabled={isSubmitting}
+            >
+              Login
+            </button>
+            <label>
+              <Link className="form__link" to={isLogin ? "/register" : "/auth"}>
+                { isLogin ? "Not Account? Register!" : "Have account? Login!" }
+              </Link>
+            </label>
           </form>
         </>
       )}

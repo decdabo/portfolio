@@ -34,16 +34,21 @@
             width: 50%;
             transition: width 0.3s;
           }
+          @media (max-width: $display-mobile) {
+            height: 20%;
+          }
         }
 
         &__body {
+          @include center-box();
           height: 70%;
           width: 100%;
 
           p {
             font-size: large;
             text-align: center;
-            margin: auto;
+            height: 100%;
+            width: 90%;
           }
         }
       }
@@ -57,9 +62,11 @@
       padding: 2%;
       position: absolute;
       width: 240px;
-
       & i {
         margin-left: 5%
+      }
+      @media (max-width: $display-tablet) {
+        display: none;
       }
     }
   }
